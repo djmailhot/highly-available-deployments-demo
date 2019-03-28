@@ -137,9 +137,9 @@ class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
 
 try:
 	server = ThreadedHTTPServer(('', PORT_NUMBER), myHandler)
-	print 'Started httpserver on port ' , PORT_NUMBER
+	print('Started httpserver on port %s' % PORT_NUMBER)
 	server.serve_forever()
 
 except KeyboardInterrupt:
-	print '^C received, shutting down the web server'
+	print('^C received, shutting down the web server')
 	server.socket.close()
